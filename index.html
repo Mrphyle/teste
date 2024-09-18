@@ -3,81 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/Logomarca.ico" type="image/x-icon">
-    <title>Treine REM</title>
-    <style>
-        body {
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Adicionado para alinhar os botões verticalmente */
-            height: 100vh;
-            margin: 0;
-        }
-        .imgEmail {
-            width: 36vw;
-            height: 10vh;
-            margin-top: 15px; /* Ajuste a margem conforme necessário */
-        }
-        .imgsenha {
-            width: 36vw;
-            height: 10vh;
-            margin-top: 15px; /* Ajuste a margem conforme necessário */
-        }
-        .imgoogle {
-            width: 35vw; /*8.7*/
-            height: 10vh; /**/
-            margin-top: 15px; /* Ajuste a margem conforme necessário */
-        }
-        .imgenviar {
-            width: 19.5vw; /*3.3*/
-            height: 15vh;  /*1.8 e */
-            margin-top: 15px; /* Ajuste a margem conforme necessário */
-        }
-
-        @media (max-width: 768px) {
-            body {
-                height: auto;
-                padding: 20px;
-            }
-            .imgoogle {
-                width: 90%; /* Ajuste para telas menores */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .imgEmail {
-                width: 60%;
-            }
-            .imgoogle {
-                width: 90%; /* Ajuste para telas menores */
-            }
-        }
-    </style>
-</head>
-<body>
-    <a href="javascript:void(0);">
-        <img src="imagens/Botão login.png" class="imgEmail" alt="Email">
-    </a>
-    <a href="javascript:void(0);">
-        <img src="imagens/Botão senha.png" class="imgsenha" alt="senha">
-    </a>
-    <a href="javascript:void(0);" onclick="openGoogle()">
-        <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
-    </a>
-    <a href="javascript:void(0);">
-        <img src="imagens/Enter button.png" class="imgenviar" alt="enviar">
-    </a>
-    
+    <title>Detecção de Dispositivo</title>
     <script>
-        function openGoogle() {
-            var screenWidth = window.innerWidth;
-            var screenHeight = window.innerHeight;
-            var popupWidth = Math.max(screenWidth * 0.4, 400); 
-            var popupHeight = Math.max(screenHeight * 0.4, 400);
-            window.open("https://www.google.com", "popup", "width=" + popupWidth + ",height=" + popupHeight);
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Verifica se é um dispositivo móvel (smartphone ou tablet)
+            if (/android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent)) {
+                // Se for um dispositivo móvel
+                window.location.href = "indexcell.html";
+            } else {
+                // Se for um desktop ou laptop
+                window.location.href = "indexpc.html";
+            }
         }
     </script>
+</head>
+<body>
+    <p>Redirecionando...</p>
 </body>
 </html>
