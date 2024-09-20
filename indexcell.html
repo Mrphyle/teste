@@ -1,4 +1,3 @@
-<!--index para celular-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,12 +15,31 @@
             height: 100vh;
             margin: 0;
         }
-        .container {
+        .Emailtext {
+            color: white;
             position: relative;
-            width: 36vw;
-            height: 10vh;
+            top: 4vh;
+            left: -11.5vw;
+        }
+        .container1 {
+            position: relative;
+            width: 30vw;
+            height: 8vh;
             max-width: 400px;
-            margin-top: 15px;
+            margin-top: 2vh; /* Alterado de 15px para 2vh */
+        }
+        .Senhatext {
+            color: white;
+            position: relative;
+            top: 0vh;
+            left: -11.5vw;
+        }
+        .container2 {
+            position: relative;
+            width: 30vw;
+            height: 8vh;
+            max-width: 400px;
+            margin-top: -2vh; /* Alterado de 15px para 2vh */
         }
         .image {
             width: 100%;
@@ -33,24 +51,29 @@
             left: 0;
             width: 100%;
             height: 100%;
-            padding: 10px;
-            font-size: 16px;
+            padding: 1vh; /* Alterado de 10px para 1vh */
+            font-size: 2vh; /* Alterado de 16px para 2vh */
             border: none;
             background: transparent;
             color: white;
             box-sizing: border-box;
         }
+        .ORtext {
+            color: white;
+            position: relative;
+            margin-top: 2vh; /* Adicionado para ajustar o espaçamento */
+        }
         .imgoogle {
             width: 35vw;
             height: 10vh;
             max-width: 400px;
-            margin-top: 15px;
+            margin-top: 0vh; /* Alterado de 15px para 1vh */
         }
         .imgenviar {
             width: 14vw;
             height: 7vh;
             max-width: 400px;
-            margin-top: 15px;
+            margin-top: 1vh; /* Alterado de 15px para 1vh */
         }
 
         @media (max-width: 768px) {
@@ -81,14 +104,17 @@
     </style>
 </head>
 <body>
-    <div class="container imgEmail">
+    <h2 class="Emailtext">Email</h2>
+    <div class="container1 imgEmail">
         <img src="imagens/Botão login.png" alt="Email" class="image">
         <input type="text" class="text-input" placeholder="Digite seu email" aria-label="Digite seu email">
     </div>
-    <div class="container imgsenha">
+    <h2 class="Senhatext">Senha</h2>
+    <div class="container2 imgsenha">
         <img src="imagens/Botão senha.png" alt="Senha" class="image">
         <input type="password" class="text-input" placeholder="Digite sua senha" aria-label="Digite sua senha">
     </div>
+    <h3 class="ORtext">Ou</h3>
     <a href="javascript:void(0);" onclick="openGoogle()">
         <img src="imagens/googlebutton.png" class="imgoogle" alt="Google">
     </a>
